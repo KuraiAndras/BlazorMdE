@@ -1,16 +1,45 @@
 ﻿@inherits ComponentBase
-
 <div class="markdown-editor-container">
-    <button @onclick="SwitchEditView">Switch</button>
 
-    @if (IsEditing)
+    <div class="markdown-editor-buttons-container">
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-bold" @onclick="BoldClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-italic" @onclick="ItalicClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-heading" @onclick="HeadingClicked"></button>
+
+        <div class="markdown-editor-vertical-divider"></div>
+
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-quote" @onclick="QuoteClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-list" @onclick="GenericListClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-numberedlist" @onclick="NumberedListClicked"></button>
+
+        <div class="markdown-editor-vertical-divider"></div>
+
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-link" @onclick="LinkClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-image" @onclick="ImageClicked"></button>
+        
+        <div class="markdown-editor-vertical-divider"></div>
+
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-preview" @onclick="PreviewClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-sidebyside" @onclick="SideBySideClicked"></button>
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-fullscreen" @onclick="FullScreenClicked"></button>
+        
+        <div class="markdown-editor-vertical-divider"></div>
+
+        <button class="markdown-editor-icon-button icon-markdown-editor-icon-help" @onclick="HelpClicked"></button>
+    </div>
+    
+    <hr class="markdown-editor-divider"/>
+
+    @if (ShowPreview)
     {
-        <textarea @bind="@Content">
+        <textarea class="markdown-editor-text-area"
+                  @bind="@Content"
+                  oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
 
         </textarea>
     }
     else
     {
-        <MarkdownView Content="@Content" />
+        <MarkdownView Class="markdown-editor-text-area" Content="@Content" />
     }
 </div>
