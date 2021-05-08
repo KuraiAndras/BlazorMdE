@@ -1,9 +1,26 @@
 ﻿@inherits ComponentBase
-
 <div class="markdown-editor-container">
-    <button @onclick="SwitchEditView">Switch</button>
+    
+    <div class="markdown-editor-buttons-container">
+        <button @onclick="BoldClicked"><b>B</b></button>
+        <button @onclick="ItalicClicked"><i>I</i></button>
+        <button @onclick="HeadingClicked">H</button>
+        
+        <button @onclick="QuoteClicked">"</button>
+        <button @onclick="GenericListClicked">List</button>
+        <button @onclick="NumberedListClicked">NList</button>
 
-    @if (IsEditing)
+        <button @onclick="LinkClicked">Link</button>
+        <button @onclick="ImageClicked">Image</button>
+
+        <button @onclick="PreviewClicked">Preview</button>
+        <button @onclick="SideBySideClicked">Side</button>
+        <button @onclick="FullScreenClicked">Full</button>
+
+        <button @onclick="HelpClicked">Help</button>
+    </div>
+
+    @if (ShowPreview)
     {
         <textarea @bind="@Content">
 
@@ -11,6 +28,6 @@
     }
     else
     {
-        <MarkdownView Content="@Content" />
+        <MarkdownView Content="@Content"/>
     }
 </div>
