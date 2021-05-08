@@ -1,0 +1,16 @@
+﻿@inherits ComponentBase
+
+<div class="markdown-editor-container">
+    <button @onclick="SwitchEditView">Switch</button>
+
+    @if (IsEditing)
+    {
+        <textarea @bind="@Content">
+
+        </textarea>
+    }
+    else
+    {
+        <MarkdownView Content="@Content" />
+    }
+</div>
