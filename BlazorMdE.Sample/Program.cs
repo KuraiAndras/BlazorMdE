@@ -14,6 +14,7 @@ namespace BlazorMdE.Sample
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(_ => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddBlazorMdE();
 
             await builder.Build().RunAsync();
         }
