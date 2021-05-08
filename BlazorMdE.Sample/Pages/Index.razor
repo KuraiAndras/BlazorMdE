@@ -1,3 +1,13 @@
 ﻿@page "/"
 
 <h1>BlazorMdE - Native Blazor Markdown Editor</h1>
+
+<MarkdownEditor Content="@Text" />
+
+
+<p>@Text</p>
+
+@code
+{
+    private string Text { get; set; } = string.Empty;
+}
