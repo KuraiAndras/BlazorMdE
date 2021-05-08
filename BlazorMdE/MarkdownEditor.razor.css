@@ -6,7 +6,7 @@
 }
 
 .markdown-editor-buttons-container {
-    padding: 10px;
+    padding: 7px;
     display: flex;
 }
 
@@ -31,3 +31,17 @@
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.markdown-editor-icon-button {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    color: #65717F;
+}
+
+    .markdown-editor-icon-button:hover {
+        border: 1px solid #DDDDDD;
+        padding: 4px;
+        border-radius: 5px;
+    }
