@@ -32,7 +32,7 @@
 
     @if (ShowPreview)
     {
-        <textarea class="markdown-editor-text-area"
+        <textarea class="markdown-editor-textarea"
                   @bind="@Content"
                   oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
 
@@ -40,6 +40,6 @@
     }
     else
     {
-        <MarkdownView Class="markdown-editor-text-area" Content="@Content" />
+        <MarkdownView Class="markdown-editor-textarea" Content="@Content" />
     }
 </div>
