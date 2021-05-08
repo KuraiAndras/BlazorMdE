@@ -22,7 +22,10 @@
 
     @if (ShowPreview)
     {
-        <textarea @bind="@Content">
+        <textarea
+                  class="markdown-editor-text-area"
+                  @bind="@Content"
+                  oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
 
         </textarea>
     }
