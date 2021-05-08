@@ -2,30 +2,30 @@
 <div class="markdown-editor-container">
 
     <div class="markdown-editor-buttons-container">
-        <button @onclick="BoldClicked"><b>B</b></button>
-        <button @onclick="ItalicClicked"><i>I</i></button>
-        <button @onclick="HeadingClicked">H</button>
+        <button class="icon-markdown-editor-icon-bold" @onclick="BoldClicked"></button>
+        <button class="icon-markdown-editor-icon-italic" @onclick="ItalicClicked"></button>
+        <button class="icon-markdown-editor-icon-heading" @onclick="HeadingClicked"></button>
 
         <div class="markdown-editor-vertical-divider"></div>
 
-        <button @onclick="QuoteClicked">"</button>
-        <button @onclick="GenericListClicked">List</button>
-        <button @onclick="NumberedListClicked">NList</button>
+        <button class="icon-markdown-editor-icon-quote" @onclick="QuoteClicked"></button>
+        <button class="icon-markdown-editor-icon-list" @onclick="GenericListClicked"></button>
+        <button class="icon-markdown-editor-icon-numberedlist" @onclick="NumberedListClicked"></button>
 
         <div class="markdown-editor-vertical-divider"></div>
 
-        <button @onclick="LinkClicked">Link</button>
-        <button @onclick="ImageClicked">Im</button>
+        <button class="icon-markdown-editor-icon-link" @onclick="LinkClicked"></button>
+        <button class="icon-markdown-editor-icon-image" @onclick="ImageClicked"></button>
         
         <div class="markdown-editor-vertical-divider"></div>
 
-        <button @onclick="PreviewClicked">Pre</button>
-        <button @onclick="SideBySideClicked">Side</button>
-        <button @onclick="FullScreenClicked">Full</button>
+        <button class="icon-markdown-editor-icon-preview" @onclick="PreviewClicked"></button>
+        <button class="icon-markdown-editor-icon-sidebyside" @onclick="SideBySideClicked"></button>
+        <button class="icon-markdown-editor-icon-fullscreen" @onclick="FullScreenClicked"></button>
         
         <div class="markdown-editor-vertical-divider"></div>
 
-        <button @onclick="HelpClicked">Help</button>
+        <button class="icon-markdown-editor-icon-help" @onclick="HelpClicked"></button>
     </div>
     
     <hr class="markdown-editor-divider"/>
