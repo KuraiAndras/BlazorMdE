@@ -1,18 +1,26 @@
 ﻿.markdown-editor-container {
     min-width: 400px;
     max-width: 800px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
 }
 
 .markdown-editor-buttons-container {
-    
+    padding: 10px;
 }
 
-.markdown-editor-text-area {
-    border: 1px solid #DDDDDD;
+::deep .markdown-editor-text-area {
     outline: none;
     width: 100%;
     height: 320px;
     resize: none;
     overflow: hidden;
-    border-radius: 5px;
+    border: hidden;
+}
+
+.markdown-editor-divider {
+    margin: 0;
+    padding: 5px;
+    padding-left: 0;
+    padding-right: 0;
 }

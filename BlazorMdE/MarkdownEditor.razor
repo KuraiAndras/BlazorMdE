@@ -1,29 +1,30 @@
 ﻿@inherits ComponentBase
 <div class="markdown-editor-container">
-    
+
     <div class="markdown-editor-buttons-container">
         <button @onclick="BoldClicked"><b>B</b></button>
         <button @onclick="ItalicClicked"><i>I</i></button>
         <button @onclick="HeadingClicked">H</button>
-        
+
         <button @onclick="QuoteClicked">"</button>
         <button @onclick="GenericListClicked">List</button>
         <button @onclick="NumberedListClicked">NList</button>
 
         <button @onclick="LinkClicked">Link</button>
-        <button @onclick="ImageClicked">Image</button>
+        <button @onclick="ImageClicked">Im</button>
 
-        <button @onclick="PreviewClicked">Preview</button>
+        <button @onclick="PreviewClicked">Pre</button>
         <button @onclick="SideBySideClicked">Side</button>
         <button @onclick="FullScreenClicked">Full</button>
 
         <button @onclick="HelpClicked">Help</button>
     </div>
+    
+    <hr class="markdown-editor-divider"/>
 
     @if (ShowPreview)
     {
-        <textarea
-                  class="markdown-editor-text-area"
+        <textarea class="markdown-editor-text-area"
                   @bind="@Content"
                   oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
 
@@ -31,6 +32,6 @@
     }
     else
     {
-        <MarkdownView Content="@Content"/>
+        <MarkdownView Class="markdown-editor-text-area" Content="@Content" />
     }
 </div>
