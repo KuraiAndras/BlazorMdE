@@ -4,7 +4,8 @@ namespace BlazorMdE
 {
     public partial class MarkdownEditor
     {
-        private bool ShowPreview { get; set; } = true;
+        private bool ShowPreview { get; set; } = false;
+        private bool ShowLive { get; set; } = false;
         [Parameter] public string Content { get; set; } = string.Empty;
 
         private void BoldClicked()
@@ -47,11 +48,24 @@ namespace BlazorMdE
             throw new System.NotImplementedException();
         }
 
-        private void PreviewClicked() => ShowPreview = !ShowPreview;
+        private void PreviewClicked()
+        {
+            if (ShowLive && !ShowPreview)
+            {
+                ShowLive = false;
+            }
+
+            ShowPreview = !ShowPreview;
+        }
 
         private void SideBySideClicked()
         {
-            throw new System.NotImplementedException();
+            if (ShowPreview && !ShowLive)
+            {
+                ShowPreview = false;
+            }
+
+            ShowLive = !ShowLive;
         }
 
         private void FullScreenClicked()

@@ -30,13 +30,21 @@
 
     <hr class="markdown-editor-divider" />
 
-    @if (ShowPreview)
+    @if (!ShowPreview)
     {
-        <textarea class="markdown-editor-textarea"
-                  @bind="@Content"
-                  oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
+        <div class="markdown-editor-textarea-container">
+            <textarea class="markdown-editor-textarea"
+                      @bind="@Content"
+                      @bind:event="oninput">
+            </textarea>
 
-        </textarea>
+            @if (ShowLive)
+            {
+                <div class="markdown-editor-vertical-divider"></div>
+
+                <MarkdownView Class="markdown-editor-textarea" Content="@Content" />
+            }
+        </div>
     }
     else
     {

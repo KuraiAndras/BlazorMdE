@@ -90,6 +90,14 @@
     border: hidden;
 }
 
+.markdown-editor-textarea-container {
+    display: flex;
+}
+
+    .markdown-editor-textarea-container .markdown-editor-vertical-divider {
+        margin-top: -10px;
+    }
+
 .markdown-editor-divider {
     margin: 0;
     padding: 5px;
