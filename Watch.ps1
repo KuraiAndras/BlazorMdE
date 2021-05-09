@@ -1,1 +1,1 @@
-dotnet watch run --project .\BlazorMdE.Sample\BlazorMdE.Sample.csproj
+dotnet watch run --project .\BlazorMdE.Documentation\BlazorMdE.Documentation.csproj

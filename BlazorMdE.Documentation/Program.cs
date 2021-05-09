@@ -4,7 +4,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace BlazorMdE.Sample
+namespace BlazorMdE.Documentation
 {
     public class Program
     {
