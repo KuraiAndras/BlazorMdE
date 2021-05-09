@@ -35,8 +35,9 @@
         <div class="markdown-editor-textarea-container">
             <textarea class="markdown-editor-textarea"
                       @bind="@Content"
-                      oninput='this.style.height = "320px";this.style.height = this.scrollHeight + "px"'>
+                      @bind:event="oninput">
             </textarea>
+
             @if (ShowLive)
             {
                 <div class="markdown-editor-vertical-divider"></div>
